@@ -159,18 +159,16 @@ module.exports = (env, argv) => {
       port: OHIF_PORT,
       client: {
         overlay: { errors: true, warnings: false },
+        progress: true,
       },
       proxy: [
-        {
-          '/dicomweb': 'http://localhost:5000',
-          '/dicom-microscopy-viewer': {
-            target: 'http://localhost:3000',
-            pathRewrite: {
-              '^/dicom-microscopy-viewer': `/${PUBLIC_URL}/dicom-microscopy-viewer`,
-            },
+          {
+            context: ['/dicom-web'],
+            target: 'http://65.2.187.164:8042',
+            changeOrigin: true,
+            secure: false,
           },
-        },
-      ],
+        ],
       static: [
         {
           directory: '../../testdata',
@@ -195,18 +193,18 @@ module.exports = (env, argv) => {
     },
   });
 
-  if (hasProxy) {
-    mergedConfig.devServer.proxy = mergedConfig.devServer.proxy || {};
-    mergedConfig.devServer.proxy = {
-      [PROXY_TARGET]: {
-        target: PROXY_DOMAIN,
-        changeOrigin: true,
-        pathRewrite: {
-          [`^${PROXY_PATH_REWRITE_FROM}`]: PROXY_PATH_REWRITE_TO,
-        },
-      },
-    };
-  }
+  // if (hasProxy) {
+  //   mergedConfig.devServer.proxy = mergedConfig.devServer.proxy || {};
+  //   mergedConfig.devServer.proxy = {
+  //     [PROXY_TARGET]: {
+  //       target: PROXY_DOMAIN,
+  //       changeOrigin: true,
+  //       pathRewrite: {
+  //         [`^${PROXY_PATH_REWRITE_FROM}`]: PROXY_PATH_REWRITE_TO,
+  //       },
+  //     },
+  //   };
+  // }
 
   if (isProdBuild) {
     mergedConfig.plugins.push(

@@ -34,6 +34,7 @@ import More from './Sources/More';
 import MultiplePatients from './Sources/MultiplePatients';
 import NavigationPanelReveal from './Sources/NavigationPanelReveal';
 import OHIFLogo from './Sources/OHIFLogo';
+import RadiantViewLogo from './Sources/RadiantViewLogo'
 import Patient from './Sources/Patient';
 import Pin from './Sources/Pin';
 import PinFill from './Sources/PinFill';
@@ -502,6 +503,7 @@ export const Icons = {
   MultiplePatients,
   NavigationPanelReveal,
   OHIFLogo,
+  RadiantViewLogo,
   Patient,
   Pin,
   PinFill,
