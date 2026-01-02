@@ -106,9 +106,9 @@ window.config = {
       configuration: {
         friendlyName: 'Live Orthanc Server',
         name: 'ORTHANC',
-        wadoUriRoot: 'http://15.207.181.4/pacs/dicom-web',
-        qidoRoot: 'http://15.207.181.4/pacs/dicom-web',
-        wadoRoot: 'http://15.207.181.4/pacs/dicom-web',
+        wadoUriRoot: 'https://dev-dicom-viewer.radiantviewsol.com/pacs/dicom-web',
+        qidoRoot: 'https://dev-dicom-viewer.radiantviewsol.com/pacs/dicom-web',
+        wadoRoot: 'https://dev-dicom-viewer.radiantviewsol.com/pacs/dicom-web',
         qidoSupportsIncludeField: true,
         supportsReject: true,
         dicomUploadEnabled: true,
