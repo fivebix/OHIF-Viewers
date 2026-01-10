@@ -15,49 +15,49 @@ const InvestigationalUseDialog = ({
     option: showDialogOption.AlwaysShowDialog,
   },
 }) => {
-  const { option, days } = dialogConfiguration;
+  const { option } = dialogConfiguration;
   const [isHidden, setIsHidden] = useState(true);
   const { t } = useTranslation('InvestigationalUseDialog');
 
-  useEffect(() => {
-    const dialogLocalState = localStorage.getItem('investigationalUseDialog');
-    const dialogSessionState = sessionStorage.getItem('investigationalUseDialog');
+  // useEffect(() => {
+  //   const dialogLocalState = localStorage.getItem('investigationalUseDialog');
+  //   const dialogSessionState = sessionStorage.getItem('investigationalUseDialog');
 
-    switch (option) {
-      case showDialogOption.NeverShowDialog:
-        setIsHidden(true);
-        break;
-      case showDialogOption.AlwaysShowDialog:
-        setIsHidden(!!dialogSessionState);
-        break;
-      case showDialogOption.ShowOnceAndConfigure:
-        if (dialogLocalState) {
-          const { expiryDate } = JSON.parse(dialogLocalState);
-          const isExpired = new Date() > new Date(expiryDate);
-          setIsHidden(!isExpired);
-        } else {
-          setIsHidden(false);
-        }
-        break;
-      default:
-        setIsHidden(true);
-    }
-  }, [option, days]);
+  //   switch (option) {
+  //     case showDialogOption.NeverShowDialog:
+  //       setIsHidden(true);
+  //       break;
+  //     case showDialogOption.AlwaysShowDialog:
+  //       setIsHidden(!!dialogSessionState);
+  //       break;
+  //     case showDialogOption.ShowOnceAndConfigure:
+  //       if (dialogLocalState) {
+  //         const { expiryDate } = JSON.parse(dialogLocalState);
+  //         const isExpired = new Date() > new Date(expiryDate);
+  //         setIsHidden(!isExpired);
+  //       } else {
+  //         setIsHidden(false);
+  //       }
+  //       break;
+  //     default:
+  //       setIsHidden(true);
+  //   }
+  // }, [option, days]);
 
-  const handleConfirmAndHide = () => {
-    const expiryDate = new Date();
+  // const handleConfirmAndHide = () => {
+  //   const expiryDate = new Date();
 
-    switch (option) {
-      case showDialogOption.ShowOnceAndConfigure:
-        expiryDate.setDate(expiryDate.getDate() + days);
-        localStorage.setItem('investigationalUseDialog', JSON.stringify({ expiryDate }));
-        break;
-      case showDialogOption.AlwaysShowDialog:
-        sessionStorage.setItem('investigationalUseDialog', 'hidden');
-        break;
-    }
-    setIsHidden(true);
-  };
+  //   switch (option) {
+  //     case showDialogOption.ShowOnceAndConfigure:
+  //       expiryDate.setDate(expiryDate.getDate() + days);
+  //       localStorage.setItem('investigationalUseDialog', JSON.stringify({ expiryDate }));
+  //       break;
+  //     case showDialogOption.AlwaysShowDialog:
+  //       sessionStorage.setItem('investigationalUseDialog', 'hidden');
+  //       break;
+  //   }
+  //   setIsHidden(true);
+  // };
 
   if (isHidden) {
     return null;
@@ -83,13 +83,13 @@ const InvestigationalUseDialog = ({
             </div>
           </div>
         </div>
-        <Button
+        {/* <Button
           onClick={handleConfirmAndHide}
           className="bg-primary-main"
           dataCY="confirm-and-hide-button"
         >
           {t('Confirm and hide')}
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
