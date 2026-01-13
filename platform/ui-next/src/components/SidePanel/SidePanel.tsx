@@ -311,7 +311,7 @@ const SidePanel = ({
                 >
                   {React.createElement(Icons[childComponent.iconName] || Icons.MissingIcon, {
                     className: classnames({
-                      'text-primary': true,
+                      'text-gray-400': true,
                       'ohif-disabled': childComponent.disabled,
                     }),
                     style: {

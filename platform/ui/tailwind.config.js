@@ -29,23 +29,24 @@ module.exports = {
       },
 
       primary: {
-        light: '#5acce6',
-        main: '#0944b3',
-        dark: '#090c29',
-        active: '#348cfd',
+        light: '#363637',
+        main: '#000000', // Primary Black
+        dark: '#000000',
+        active: '#277F81',
       },
+      popover: '#1A5556',
       inputfield: {
-        main: '#3a3f99',
-        disabled: '#2b166b',
-        focus: '#5acce6',
-        placeholder: '#39383f',
+        main: '#1A1A1B',
+        disabled: '#363637',
+        focus: '#277F81',
+        placeholder: '#808080',
       },
 
       secondary: {
-        light: '#3a3f99',
-        main: '#2b166b',
-        dark: '#041c4a',
-        active: '#1f1f27',
+        light: '#4EA4A6',
+        main: '#277F81', // Secondary Teal
+        dark: '#1A5556',
+        active: '#000000',
       },
 
       indigo: {
@@ -54,30 +55,29 @@ module.exports = {
 
       common: {
         bright: '#e1e1e1',
-        light: '#a19fad',
+        light: '#808080',
         main: '#fff',
-        dark: '#726f7e',
-        active: '#2c3074',
+        dark: '#000000',
+        active: '#277F81',
       },
       bkg: {
-        low: '#050615',
-        med: '#090C29',
-        full: '#041C4A',
+        low: '#000000',
+        med: '#1A5556',
+        full: '#277F81',
       },
       info: {
         primary: '#FFFFFF',
-        secondary: '#7BB2CE',
+        secondary: '#277F81',
       },
       actions: {
-        primary: '#348CFD',
-        highlight: '#5ACCE6',
-        hover: 'rgba(52, 140, 253, 0.2)',
+        primary: '#0263D1',
+        highlight: '#46CC34',
+        hover: 'rgba(39, 127, 129, 0.2)',
       },
       customgreen: {
-        100: '#05D97C',
-        200: '#0FD97C',
+        100: '#46CC34',
+        200: '#46CC34',
       },
-
       customblue: {
         10: '#0A163F',
         20: '#0B1F54',
@@ -86,21 +86,20 @@ module.exports = {
         50: '#0F3A94',
         80: '#1454D4',
         100: '#c4fdff',
-        200: '#38daff',
+        200: '#0263D1',
         300: '#1D204D',
         400: '#90A0C1',
       },
 
       customgray: {
-        100: '#262943',
+        100: '#808080',
       },
-
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
         300: '#e2e8f0',
         400: '#cbd5e0',
-        500: '#a0aec0',
+        500: '#808080',
         600: '#718096',
         700: '#4a5568',
         800: '#2d3748',
@@ -144,7 +143,7 @@ module.exports = {
         200: '#c6f6d5',
         300: '#9ae6b4',
         400: '#68d391',
-        500: '#48bb78',
+        500: '#46CC34',
         600: '#38a169',
         700: '#2f855a',
         800: '#276749',
@@ -155,7 +154,7 @@ module.exports = {
         200: '#b2f5ea',
         300: '#81e6d9',
         400: '#4fd1c5',
-        500: '#38b2ac',
+        500: '#277F81',
         600: '#319795',
         700: '#2c7a7b',
         800: '#285e61',
@@ -166,7 +165,7 @@ module.exports = {
         200: '#bee3f8',
         300: '#90cdf4',
         400: '#63b3ed',
-        500: '#4299e1',
+        500: '#0263D1',
         600: '#3182ce',
         700: '#2b6cb0',
         800: '#2c5282',
@@ -254,16 +253,16 @@ module.exports = {
       current: 'currentColor',
     },
     fontSize: {
-      xxs: '0.6875rem', // 11px
-      xs: '0.75rem', // 12px
-      sm: '0.8125rem', // 13px
-      base: '0.875rem', // 14px
-      lg: '1rem', // 16px
-      xl: '1.125rem', // 18px
-      '2xl': '1.25rem', // 20px
-      '3xl': '1.375rem', // 22px
-      '4xl': '1.5rem', // 24px
-      '5xl': '1.875rem', // 30px
+      xxs: '0.6875rem',
+      xs: '0.75rem',
+      sm: '0.8125rem',
+      base: '0.875rem',
+      lg: '1rem',
+      xl: '1.125rem',
+      '2xl': '1.25rem',
+      '3xl': '1.375rem',
+      '4xl': '1.5rem',
+      '5xl': '1.875rem',
     },
     flex: {
       1: '1 1 0%',
