@@ -105,7 +105,7 @@ function Container({ children }: { children: ReactNode }) {
           return (
             <div
               key={location}
-              className={locationClasses[location]}
+              className={classNames(locationClasses[location], 'pointer-events-auto')}
             >
               {children}
             </div>

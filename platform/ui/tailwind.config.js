@@ -34,7 +34,7 @@ module.exports = {
         dark: '#000000',
         active: '#277F81',
       },
-      popover: '#1A5556',
+      popover: '#2A7F7B',
       inputfield: {
         main: '#1A1A1B',
         disabled: '#363637',
@@ -45,7 +45,7 @@ module.exports = {
       secondary: {
         light: '#4EA4A6',
         main: '#277F81', // Secondary Teal
-        dark: '#1A5556',
+        dark: '#2A7F7B',
         active: '#000000',
       },
 
@@ -62,7 +62,7 @@ module.exports = {
       },
       bkg: {
         low: '#000000',
-        med: '#1A5556',
+        med: '#2A7F7B',
         full: '#277F81',
       },
       info: {
@@ -71,12 +71,12 @@ module.exports = {
       },
       actions: {
         primary: '#0263D1',
-        highlight: '#46CC34',
+        highlight: '#646BE7',
         hover: 'rgba(39, 127, 129, 0.2)',
       },
       customgreen: {
-        100: '#46CC34',
-        200: '#46CC34',
+        100: '#646BE7',
+        200: '#646BE7',
       },
       customblue: {
         10: '#0A163F',
@@ -143,7 +143,7 @@ module.exports = {
         200: '#c6f6d5',
         300: '#9ae6b4',
         400: '#68d391',
-        500: '#46CC34',
+        500: '#646BE7',
         600: '#38a169',
         700: '#2f855a',
         800: '#276749',

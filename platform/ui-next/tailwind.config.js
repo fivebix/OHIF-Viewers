@@ -43,7 +43,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        highlight: '#46CC34',
+        highlight: '#646BE7',
         neutral: '#808080',
         'neutral-light': '#e1e1e1',
         'neutral-dark': '#363637',
@@ -66,14 +66,14 @@ module.exports = {
         },
         muted: {
           DEFAULT: '#363637',
-          foreground: '#808080',
+          foreground: '#c4c3c3',
         },
         accent: {
           DEFAULT: '#277F81',
           foreground: '#ffffff',
         },
         popover: {
-          DEFAULT: '#1A5556',  // Dark Teal
+          DEFAULT: '#2A7F7B',  // Dark Teal
           foreground: '#ffffff',
         },
         card: {
@@ -102,7 +102,7 @@ module.exports = {
       },
       bkg: {
         low: '#000000',
-        med: '#1A5556',
+        med: '#2A7F7B',
         full: '#277F81',
       },
       info: {
@@ -111,7 +111,7 @@ module.exports = {
       },
       actions: {
         primary: '#0263D1',
-        highlight: '#46CC34',
+        highlight: '#646BE7',
         hover: 'rgba(39, 127, 129, 0.2)',
       },
     },

@@ -100,7 +100,7 @@ function ViewerHeader({ appConfig }: withAppTypes<{ appConfig: AppTypes.Config }
         <div className="text-primary flex cursor-pointer items-center">
           <Button
             variant="ghost"
-            className="hover:bg-primary-dark"
+            className="hover:bg-primary-dark hover:text-highlight"
             onClick={() => {
               commandsManager.run('undo');
             }}
@@ -109,7 +109,7 @@ function ViewerHeader({ appConfig }: withAppTypes<{ appConfig: AppTypes.Config }
           </Button>
           <Button
             variant="ghost"
-            className="hover:bg-primary-dark"
+            className="hover:bg-primary-dark hover:text-highlight"
             onClick={() => {
               commandsManager.run('redo');
             }}
