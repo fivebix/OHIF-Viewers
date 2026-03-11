@@ -125,6 +125,31 @@ window.config = {
         },
       },
     },
+    {
+      namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
+      sourceName: 'orthanc-prod',
+      configuration: {
+        friendlyName: 'Prod Orthanc Server',
+        name: 'ORTHANC-PROD',
+        wadoUriRoot: 'https://dev-dicom-viewer.radiantviewsol.com/pacs-prod/dicom-web',
+        qidoRoot: 'https://dev-dicom-viewer.radiantviewsol.com/pacs-prod/dicom-web',
+        wadoRoot: 'https://dev-dicom-viewer.radiantviewsol.com/pacs-prod/dicom-web',
+        qidoSupportsIncludeField: true,
+        supportsReject: true,
+        dicomUploadEnabled: true,
+        imageRendering: 'wadors',
+        thumbnailRendering: 'wadors',
+        enableStudyLazyLoad: true,
+        supportsFuzzyMatching: true,
+        supportsWildcard: true,
+        omitQuotationForMultipartRequest: true,
+        bulkDataURI: {
+          enabled: true,
+          relativeResolution: 'studies',
+          transform: url => url.replace('/pixeldata.mp4', '/rendered'),
+        },
+      },
+    },
 
     {
       namespace: '@ohif/extension-default.dataSourcesModule.dicomwebproxy',
