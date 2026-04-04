@@ -101,12 +101,13 @@ const ToolButtonListDropDown = React.forwardRef<HTMLDivElement, ToolButtonListDr
             'inline-flex h-10 w-5 items-center justify-center',
             '!rounded-tr-lg !rounded-br-lg !rounded-tl-none !rounded-bl-none',
             'bg-transparent',
+            'group',
             className
           )}
         >
           <Icons.ByName
             name="chevron-down"
-            className="text-primary h-5 w-5"
+            className="text-white h-5 w-5 group-hover:text-highlight group-hover:bg-background hover:text-highlight"
           />
         </Button>
       </DropdownMenuTrigger>
