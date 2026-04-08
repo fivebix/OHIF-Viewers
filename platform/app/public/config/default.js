@@ -26,6 +26,7 @@ window.config = {
     prefetch: 25,
   },
   showErrorDetails: 'always', // 'always', 'dev', 'production'
+  showErrorDetails: 'always', // 'always', 'dev', 'production'
   // filterQueryParam: false,
   // Defines multi-monitor layouts
   multimonitor: [
