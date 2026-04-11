@@ -51,9 +51,6 @@ jobs:
             echo "Installing dependencies..."
             yarn install --frozen-lockfile
 
-            echo "Building project..."
-            yarn build
-
             echo "Reloading Nginx..."
             sudo systemctl reload nginx
 
