@@ -377,7 +377,7 @@ const SidePanel = ({
                         tabSpacerWidth
                       )}
                     >
-                      <div className="bg-primary-dark h-[20px] w-full"></div>
+                      <div className="bg-gray-300 h-[20px] w-full"></div>
                     </div>
                   )}
                   <Tooltip key={tabIndex}>
@@ -401,7 +401,7 @@ const SidePanel = ({
                         >
                           {React.createElement(Icons[tab.iconName] || Icons.MissingIcon, {
                             className: classnames({
-                              'text-primary': true,
+                              'text-white': true,
                               'ohif-disabled': disabled,
                             }),
                             style: {
