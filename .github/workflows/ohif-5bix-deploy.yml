@@ -1,0 +1,52 @@
+name: Deploy OHIF Viewer to AWS EC2
+
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+
+            echo "Starting deployment..."
+            cd ~/OHIF-Viewers || exit 1
+
+            echo "Fetching latest code..."
+            git fetch origin
+
+            echo "Switching to prod branch..."
+            git checkout prod || git checkout -b prod origin/prod
+
+            echo "Resetting to latest origin/prod..."
+            git reset --hard origin/prod
+            git clean -fd
+
+            echo "Loading NVM..."
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+            echo "Installing dependencies..."
+            yarn install --frozen-lockfile
+
+            echo "Building project..."
+            yarn build
+
+            echo "Reloading Nginx..."
+            sudo systemctl reload nginx
+
+            echo "Deployment completed successfully"
