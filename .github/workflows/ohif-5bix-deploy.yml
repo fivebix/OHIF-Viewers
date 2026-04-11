@@ -25,9 +25,13 @@ jobs:
             echo "Starting deployment..."
             cd ~/OHIF-Viewers || exit 1
 
-            echo "Fixing broken remote refs..."
+            echo "Fixing repo state..."
             rm -rf .git/refs/remotes/origin/prod
             git remote prune origin
+
+            echo "Cleaning working directory..."
+            git reset --hard
+            git clean -fd
 
             echo "Fetching latest code..."
             git fetch origin
@@ -35,7 +39,7 @@ jobs:
             echo "Switching to prod branch..."
             git checkout prod || git checkout -b prod origin/prod
 
-            echo "Resetting to latest origin/prod..."
+            echo "Resetting to latest..."
             git reset --hard origin/prod
             git clean -fd
 
