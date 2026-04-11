@@ -25,6 +25,10 @@ jobs:
             echo "Starting deployment..."
             cd ~/OHIF-Viewers || exit 1
 
+            echo "Fixing broken remote refs..."
+            rm -rf .git/refs/remotes/origin/prod
+            git remote prune origin
+
             echo "Fetching latest code..."
             git fetch origin
 
